@@ -1,6 +1,6 @@
 # BCU
 
-This repository contains various data tooling for the BCU. Currently, this is a personal project, however it is likely that it will eventually be adopted into BCU.
+This repository contains various data tooling for the BCU. Currently, this is a personal project, however it is possible that it will eventually be adopted into BCU.
 
 ## Archive and Realtime
 
