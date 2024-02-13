@@ -34,7 +34,7 @@ let ts = `interface ${
   tablename.charAt(0).toUpperCase() + tablename.slice(1)
 }Table {\n
   id: Generated<number>;\n`;
-ts += cols2.map(([col, map]) => `  ${col}: ${mappings[map]};\n`);
+ts += cols2.map(([col, map]) => `  ${col}: ${mappings[map]}`).join("\n");
 ts += "}";
 
 console.log(ts);
@@ -53,10 +53,3 @@ export async function down(db: Kysely<any>): Promise<void> {
   await db.schema.dropTable('${tablename}').execute()
 }
 `);
-
-let _ = `"tripduration","started at","ended at","start id","start station name","start lat","start lng","end id","end station name","end lat","end lng","ride id","usertype","birth year","gender"
-"tripduration","started at","ended at","start id","start station name","start lat","start lng","end id","end station name","end lat","end lng","ride id","usertype","birth year","gender"
-"tripduration","started at","ended at","start id","start station name","start lat","start lng","end id","end station name","end lat","end lng","ride id","usertype","postal code"
-tripduration,started at,ended at,"start id","start station name","start lat","start lng","end id","end station name","end lat","end lng",ride id,usertype,"postal code"
-"ride id","rideable type","started at","ended at","start station name","start id","end station name","end id","start lat","start lng","end lat","end lng","usertype"
-tripduration,started at,ended at,start id,start station name,end id,end station name,ride id,usertype,postal code,gender`;
