@@ -1,0 +1,20 @@
+{
+  "name": "bcu",
+  "module": "index.ts",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^4.0.0",
+    "@types/papaparse": "^5.3.14",
+    "chrono-node": "^2.7.5",
+    "jszip": "^3.10.1",
+    "kysely": "^0.27.2",
+    "kysely-bun-sqlite": "^0.3.2",
+    "papaparse": "^5.4.1"
+  }
+}
