@@ -4,8 +4,8 @@
 
 import JSZip from "jszip";
 import { parse } from "papaparse";
-import downloadHelper from "../downloadHelpers";
-import db from "../db";
+import downloadHelper from "../../downloadHelpers";
+import db from "../../db";
 const { cache } = downloadHelper("bluebike");
 
 async function fetchInitial() {
@@ -52,7 +52,7 @@ async function* downloadFiles(files: string[]) {
       let file =
         unzipped.file(f.replace("zip", "csv")) ||
         // 201801_hubway_tripdata.csv
-        unzipped.file(f.replace("zip", "csv").replaceAll("-", "_"));
+        unzipped.file(f.replace("zip", "csv").replaceAll("-", "_"))!;
       let fi = await file.async("text");
       cache.write(f.replace("zip", "csv"), fi);
       yield f.replace("zip", "csv");

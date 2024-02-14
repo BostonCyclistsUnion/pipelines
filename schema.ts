@@ -3,8 +3,8 @@ import { Generated } from "kysely";
 interface BluebikesTable {
   id: Generated<number>;
   tripduration: number;
-  "started at": number;
-  "ended at": number;
+  "started at": string;
+  "ended at": string;
   "start id": number;
   "start station name": string;
   "start lat": number;
@@ -15,8 +15,8 @@ interface BluebikesTable {
   "end lng": number;
   "ride id": number;
   usertype: string;
-  "birth year": number;
-  gender: string;
+  "birth year": number | null;
+  gender: string | null;
   "postal code": number;
   "rideable type": string;
 }
